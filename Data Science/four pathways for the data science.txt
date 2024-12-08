@@ -1,0 +1,533 @@
+
+                       DATA SCIENCE
+
+
+four pathways for the data science
+
+planning:
+define goals
+organize resources
+coordinate people
+schedule project
+
+data prep:
+get data
+clean data
+explore data
+refine data
+
+modeling:
+create model regression and neural networks
+validate model
+evaluate model
+refine model
+
+follow up:
+present model
+deploy model
+revisit model
+archive model
+
+
+TOOLS FOR CODING
+python
+R
+sql
+rapid miner
+excel 
+knime
+Hadoop
+tableau
+sas (proprietary and not open source platforms as rapid miner and the knime)
+spark
+
+STATISTICS IS CRITICAL IN DATA SCIENCE
+
+
+IN DATA SCIENCE:
+get the raw materials and check the quality of the datas.
+
+Sourcing:
+ how to get the data that goes into data science
+
+Coding:
+ computer programming to obtain, manipulate and anaylse data
+
+Math: 
+ the math behind DS methods
+
+Stats: 
+ Statistical methods to summarize and analyse data.
+
+ML: 
+ methods for finding clusters, predicting categories and scores.
+
+
+FOR DATA SCIENCE DATAS CAN BE USED FROM::
+
+existing data, data APIs, scrap web data or make data
+
+existing data means the in house data i.e. companys data , open data i.e data that is made available by the  government
+
+APIs data:
+application programming interface.
+allows apps to communicate directly with each other. allows to get the web data and directly import for data analyzing.
+
+Scraping:
+this is used for the web data without APIs.
+HTML,PDFs,etc.
+to get these datas from web without APIs we can apps and code
+
+Make data:
+we can get exactly what we need by interviews surveys and experiments.
+
+we should know about GIGO 
+
+pay attention to metrices and meaning:::
+few ways to do this:
+business metrics
+KPIs
+smart goals
+classification accuracy
+
+After getting the data we must manipulate the data according to our consent for these the technology used are:
+Apps:
+there are specialized apps for working with the datas.
+spreadsheets
+Tableau for data visualizations
+SPSS
+JASP
+
+Data:
+special formats are there for the web data for manipulations.
+for web data:
+HTML
+XML
+JSON
+
+Code:
+languages are there that gives the full control for the datas.
+R 
+Python
+SQL
+c c++ and java for the backend
+bash the command line
+Regex
+
+MATH 
+is the foundation of the data science
+used to make informed choices and find and fix problems and can even be done by hands easlily.
+
+we have data and procedures on hand but how to used it and why to use data this is our understanding and not the computers job.
+
+we also need to know what to do when things dont work right. i.e. for factor conversion and many maths problems we need to have math knowledge
+
+some math is easier and fast in hand than to be done by computers
+
+
+WHAT KIND OF MATH
+Algebra
+  elementary algebra, linear(matrix) algebra and systems of linear equations
+  calculus and big O can be
+  Probability  Baye's theorem
+
+Statistics: 
+  this can be thought as the process or the pattern in the chaos
+  this helps to explore, describe and infer the data and helps to keep many choices 
+  available
+
+
+we try to explore data here:
+  exploratory graphics: helps people to visualize and explore through graphics
+  exploratory statistics
+  descriptive statistics: what we study in the colleges
+
+next thing is inference:  ( inference: conclusion reached on the basis of evidence and reasoning)
+
+  we try to take the information from the data and from samples to the population i.e. hypothesis technique and estimation.
+
+we can consider in details as well
+  feature selection, problems , validation of the data and there is the choice of      estimators. how well our models will fit in the data 
+
+
+
+                     MACHINE LEARNING OVERVIEW
+
+data science is the intersection of coding stats and domain whereas the machine learning is the intersection of coding and stats.
+
+ generally deals with the data space i.e. the dimension reduction which means we take a lot amount of data we reduce dimension by taking large data sets and reduce to find the most important part of the data 
+ it on the basis of usefulness and the importance using the various methods. i.e. clustering K-means and finding anomalies( something that deviates from what is standard, normal or expected) in the data space
+
+
+categories:
+logistic aggression  like for like
+KNN
+Naive Bayes for classification
+Decision Trees
+SVM support vector machines
+neural nets
+
+any of these will help to find the patterns and the clumping in the data to get the similar data next to each other for cohension
+
+and for the predictions: (major element of machine learning)
+linear aggression
+poisson aggression
+ensemble models
+  
+Intrepretability or the communication skill must be good
+
+
+                  FOR MORE VALUABLE DATA MODELS AND PRESENTATION
+
+more charts less text
+simplify charts 
+avoid tables
+less text
+
+
+we must address client goals
+be minimally sufficient
+stories gives value
+
+HOW  TO GET DATA FROM CORRELATION TO CAUSATION
+our data gives us correlation i.e. this data is associated with that
+but our client want to know what our data causes i.e. causation and result
+
+
+presenting is not exploring so we must ne clear and be focused with a strong narrative to anticipate the clients query without distracting them.
+
+ 
+open data science
+there is open science framework to share data and there research
+
+we must archive all data sets both raw and processed
+all code to process the data
+comment and explain to yourself
+
+
+store data in non proprietary formats like csv
+place files in a secure accessible location like GitHub
+
+for python its jupyter notebook 
+for R its R Markdown
+
+NEXT STEPS:
+r and python coding 
+visualization of data
+statistics and math
+machine learning
+
+
+Kaggle.com : sponsor data science competition
+datakind.org: do major project and has the annual project 
+
+
+for any project to be done in future or domain we must define success and how to reach there
+should have goal in all the domain and project
+
+e.g. in business metrices we must know about the success by sales revenue leads generated customer value and churn rate. these are potential metrices for the success or the profit
+ 
+for kpis:
+non financial 
+timely
+CEO focus
+simple
+team based
+significant impact
+limited dark side
+
+
+
+for the success of any organization we must set the goal as SMART
+specific, measurable, assignable, realistic ,time bound.
+
+
+metrices: methods of measuring progress or success that helps for the organization
+
+                       DATA SOURCING 
+it is to maintain accuracy and make the tables for the data 
+
+four forms of accuracy::
+
+sensitivity: if there is a fire does the alarm ring or not. meaning we always want alarm if there is not fire as well
+specificity
+negative productive value
+positive productive value
+
+Data sourcing::
+getting data 
+inhouse data::already in the organization can be fast and easy there must not be proper format and documentation, quality may be uncertain, may be restrictions to use all data or share the results with other 
+
+open data:: prepared data that is freely available i.e. government data, corporate data or the scientific data i.e. same like reading books from the library. data.gov for the us government
+PROS::valuable dataset and wide rage of topics times and groups and also the well formatted and well documented.
+
+CONS::biased samples and meaning of data not clear, need to share analyses which can produced issues like privacy 
+
+third party data:: Data-as-a-Service. Data brokers many topics and can also helps in processing the data as well.
+
+PROS::it can save time and effort. all other data sources are community level whereas this third-party is the individual level .we can get the summaries and inferences of the data as well.
+
+CONS::can be expensive, still need to validate, distasteful to many people and we have to aware of our data affect to other people.
+
+((inferences is the conclusion reached on the basis of the research and the evidences.))
+
+
+3P's of data sources: proprietary , public and purchase.
+
+
+The best method to get the data for data sourcing is to use APIS::
+
+Apis have heard apps singing each to each.
+Application programming interface which allows programs to talk to each other. it allows to go to the web and get the data directly.
+
+REST API:
+Access data on web page via HTTP.
+Data in JSON format
+Send to other programs
+Language agnostic i.e. any programming language can call the Api and get the data
+
+Different APIS are:
+Social APIs:: Facebook twitter google talk FourSquare SoundCloud
+visual APIs:: google maps YouTube AccuWeather Pinterest Flickr
+
+hamle kunai pani programming language use garera kunai pani website bata data lina sakxan in the required format eg JSON ani teslai jasari modify garna ni sakxam. eslai nai API vanxa kinaki hamle application sanga interact gardai xam i.e. hami website sanga interact garxam. APIS make web data easy they are straight into programs and are great for data science
+
+ANOTHER WAY OF GETTING DATA IS SCRAPING::
+
+scraping means pulling information from web pages. hiding information in open. i.e. data is there in open we can see it use it but cannot be in easy format to get it.
+
+we can scrape data in these ways:
+HTML text
+HTML tables
+PDFs
+Media
+
+pay attention to copyright and privacy for getting from web pages.
+
+for scraping Apps are:
+import.io. 
+ScraperWiki
+Tabula
+Google Sheets
+Excel
+
+code can be used for scraping:
+R 
+python
+Bash
+Java
+PHP
+
+for eg if we want to scrape the data form the HTML table of the web page using googlesheets
+we can use the following formula in the cell A1 of a Google Sheet,
+IMPORTHTML("https://en.wikipedia.org/wiki/Iron_Chef_America","table",2)
+
+
+If the data i am trying to get doesn't has APIs try scraping. Use apps or code for that
+copyright and privacy
+
+MAKING DATA
+strategies are: 
+ROLE::are you active or passive
+Q/Q:: quantitative or qualitative data
+HOW:: online or in person
+
+we can do it by interviews, surveys. card sorting or experiments
+
+laboratory ::in person
+A/B testing:: online always be testing progress and optimization is continuous process.
+
+
+
+interviews can be done with people i.e. having conversation if you are working with a new topic or with new audience or if you need to find ways to improve. it is done if we donot want to constrain ((limit or restrict)) responses.
+
+ comfound:::amuze or surprise
+
+
+
+                         CODING IN DATA SCIENCE
+data tools:
+Spreadsheets
+Tableau = for data visualizations
+
+essentials tools are:
+R Python SQL and more( C,C++, Java, Bash, Regex)
+
+Applications of data science: i.e. that helps in the manipulation of data sets
+Spreadsheets
+
+
+                            TIDY DATA
+for transferring data
+column==variable
+row==case
+it is used for exporting. spreadsheet is must.
+
+SPSS statistic
+
+JASP open source free version of another statistic program 
+
+SPSS and JASP are the alternatives for the data analysis.
+JASP files can be shared online through OSF.io (open science framework)
+we can create our own space in the OSF.io where we can show and collaborate with the other people and download file and work on it.
+
+
+More than jasp and spss there are SAS (ANALYTICAL PROGRAM) (SAS university edition), JMP (visualization program) , Stata, Minitab, MATLAB, WolframALpha( interesting one), Orange, BigML(for machine learning but browser based)
+
+                                     WEB DATA (data define thyself (thyself means afailai))
+If we work with the web data we have to collaborate with HTML. Webpages are just the text document. for working with the web data and using it, we have to know how the web data are stored and encoded in the web.
+
+CSS (Cascading Style Sheets)
+XML (eXtensible Markup Language)= it is semi structured data. it is in web data, Microsoft office, iTunes library, Data files.
+in xml tags are free to define however we want which is the only difference from the HTML. tags use opening and closing angle brackets just like html.
+e.g. <genre> </genre> , <composer> </composer>, <rating> </rating>
+we can covert between different formats: 
+1) XML to CSV.
+2) HTML to XML.
+3) CSV to XML.
+
+
+xml
+= is semi structured, common for web data, translate back and forth.
+= markup language that gives meaning to text.
+= allow comments and metadata in tags.
+
+JSON (java script object notation) smaller is better.
+= is semi structured data.
+= tags define data but tags vary freely.
+= designed for data interchange.
+= corresponds with data structures.
+= typical shorter than xml.
+
+JSON is replacing the place of XML as it is more smaller and easier.
+
+
+                         COGING IN DATA SCIENCE
+ R is first in data science and then python because of the following reasons:
+
+= is free and open source (data science language) 
+= vector operations i.e. it is designed to go through the whole data without the for loop.
+= great community.
+= 7000+ packages.
+= we can choose interfaces.
+R's own IDE.
+Terminal
+RStudio.com
+Jupyter (python)
+All command line
+
+
+Python 
+= general purpose and is same as R
+= two versions of python both 2.x and 3.x they are similar but nmot identical. i.e. problems are : compatibility as code in one cannot run in other. Many use 2.x
+= interfaces:
+Python's IDLE.
+Terminal/IDE.
+Jupyter/IPython
+COntinuum Anaconda and Enthought Canopy.
+All command line
+
+
+
+DATA SCIENCE LOVES JUPYTER
+text output and markdown
+inline graphics
+easy to organize and present.
+
+NumPy and SciPy (scientific computing in general)
+Matplotlib and Seaborn (data visualization and graphics)
+Pandas (statistical analysis)
+scikit-learn (machine learning)
+
+
+
+SQL 
+language of databases
+for relational databases
+Basic commands used
+structured data
+then export data to analytical applications.
+
+RDBMS: relational database management system
+
+GUI:
+SQL Developer
+
+for Sql some commands are:
+SELECT
+FROM
+WHERE
+ORDER BY
+
+C C++ and Java are the data's back end as it is fast and reliable, typically for engineers for making analysis possible.
+ 
+ 
+Regex ::helps to find right data, powerful and flexible, cryptic (mysterious) but can be fun.
+regular expression
+Regex golf 
+                           For data science
+
+Apps:: excel and tableau  are fundamental for getting data from client and doing basic data browsing and tableau is for interactive data visualization.
+
+Code:: R or Python
+
+Utilities:: Bash and regex
+
+Domain:: field experience
+
+
+                                 MATH IN DATA SCIENCE
+
+it allows to know which procedures to use and why
+know what to do when things don't go right
+some math is easier and quicker by hand than computer
+
+Algebra:: elementary algebra regular x + y
+          linear (matrix) algebra == foundations of DS
+          system of linear equations
+
+
+Calculus, Big O, probability ,Bayes
+
+machines loves matrices(many rows and columns) and calculus is vital for optimization.
+ 
+                                  PROBABILITY
+ranges from 0 to 1
+Conditional probability -P(A|B) =probability of a if b is true
+Adding probabilities
+ P(S or R) =P(S)+P(R)-P(S&R)
+
+Multiplying probabilities:
+
+ P(S & R)= P(S) .P(R|S) i.e. probability of red given which is square only.
+
+if R and S are dependent then this otherwise it will be P(R) only.
+
+
+                              STATISTICS IN DATA SCIENCE
+
+methods:
+descriptive 
+inferential
+hypothesis testing
+estimation
+
+learn about mean, median, mode i.e. statistics
+mean is most useful and least intuitive.
+mode easy to do maynot be close to apparent center of data
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+

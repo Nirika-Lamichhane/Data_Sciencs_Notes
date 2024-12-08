@@ -1,0 +1,355 @@
+                                CS50 DATA SCIENCE
+ The Wage data involves predicting a continuous or quantitative output value.
+ This is often referred to as a regression problem.
+
+statistical learning:
+ includes wage data: the data should be in quantitative
+and includes stock market data: not includes numerical value or involves predicting
+the days stock market performance.(classification problem)
+
+
+in these both data we have both input and output variables. but there is one with only input variables:: gene expression data (clustering problem)
+
+                        TRAINING AND TESTING OF THE DATA
+
+hamilai data set provide garinxa jun ma chai certain percent train garinxa to know the underlying patterns of the data set by fitting the model to the training data.
+ani certain portion lai chai test garinxa to estimate of how well the model is likely to work in the unseen data.
+test data ma aako predictions lai chai actual outcomes haru sanga compare garinxa ra model ko performance ko barema thapauna sakinxa
+i.e. we can know how well our model generalizes and how well it predicts on the unseen datas
+   
+                                  UNSEEN DATAS
+those datas which arneot encountered during training of the datasets.
+
+
+train test garexa chai hamle model le just memorize the garirako xaina ni training data lai vanera patta lagauna sakinxa ani pattern banayera unseen data lai generalize garna sakinxa.
+esle chai hamro model le real life ma kasto perform garxa ra overfiting jasto issue lai chai kasari detect garne vanera patta lagauxa
+
+Overfitting: When the model fits the training data too well but fails to generalize to unseen data.
+
+Fitting or training a model refers to the process of enabling the model to learn patterns, relationships, or dependencies in the data so that it can make predictions or decisions effectively. 
+
+
+
+                                     REGRESSION
+
+In data science, regression refers to a statistical and machine learning technique used to model and analyze the relationships between a dependent variable (often called the target or outcome) and one or more independent variables (predictors or features). The goal of regression is to predict the value of the dependent variable based on the independent variables.
+
+
+
+                                        LINEAR REGRESSION      
+
+Models a linear relationship between the dependent and independent variables.
+Equation Y=MX+B
+
+ Predicting variables
+using one variable to predict another variables.
+eg. advertising data i.e. sales using the budget of the items.
+
+predictors variables (Data matrix) is x and response variables is y 
+
+predicting using naive model:: done by taking the mean of all the sales y values for all our observations::
+
+for all tv budget the naive model would predict the average sales and can be used as a baseline later
+
+other model:: finding the smallest distance between the neighbors values
+
+while plotting the data in python i.e. visualizing we can have the spaghetti model due to the unordered data set so to solve that we can use the NumPy function called linespace. which creates an array of ordered and evenly spaced values.
+
+%matplotlib inline command is used in jupyter notebooks to display matplotlibs i.e. the plotting of data in the notebooks output cells instead of appearing in a separate window.
+
+data_filename Vanya variable ho 
+df vaneko chai dataframe ko command ho jasle excel haru ma jasto data lai display garne kaam garxa
+df=pd.read_scv(data_filename) 
+
+
+df.iloc  helps to do the integer based indexing of the data variables and allows to select rows and columns from dataframes
+
+df.iloc[row_indices, column_indices]
+it can take a single integer, list of integers, or a slice (Start:stop:step)
+
+if data frame is large and we want to see the specific datas we can use ::
+df_new = df.head(5)
+
+here df_new contains only first 5 rows of original dataframe.
+
+for all dataframe we can use print(df)
+and if dataframe is large:: 
+
+import pandas as pd
+
+# Change display settings to show all rows
+pd.set_option('display.max_rows', None)  # Show all rows
+pd.set_option('display.max_columns', None)  # Show all columns
+
+# Print the DataFrame
+print(df)
+
+                                 SIMPLE KNN REGRESSION
+np.argsort() ::returns the indices that would sort an array. sorts in ascending order by default
+idx=np.argsort(df['tv'].values)
+.values extracts data from TV column as a NumPy array,which is needed for np.argsort() to work
+
+
+
+for line plot in matplotlib we have syntax as:
+plt.plot (x,y,style)
+
+
+# Create and train the kNN Regressor
+    model = KNeighborsRegressor(n_neighbors=k_value)
+    model.fit(x_train, y_train)
+
+k-nearest Neighbors regression model uses scikit-learn library.
+n_neighbors is paramerer which sets values of k which specifies the number of nearest neighbors to consider when making predictions. 
+
+At this stage:
+
+The model is initialized but not yet trained on the data.
+It "knows" the algorithm and parameters but has no information about the training dataset.
+
+Purpose: The fit method trains the kNN model by storing the training data.
+
+When making predictions for a new value (e.g., TV budget = $35k), it will:
+Find the 2 nearest neighbors in the training set (e.g., $30k and $40k).
+Average their corresponding sales revenue values to make the prediction.
+
+model = KNeighborsRegressor(n_neighbors=k_value): Sets up the kNN regression model with a specific k-value.
+model.fit(x_train, y_train): Stores the training dataset (x_train, y_train) so the model can later find nearest neighbors for any new input and make predictions.
+
+
+model.predict(x_test) computes predictions for the test features in x_test using the kNN regression algorithm.
+It relies on the stored training data (x_train, y_train) to find the nearest neighbors and average their target values for each point in x_test.
+
+
+ KNN is called non-parametric because it does not reduce the data into a set of parameters to describe the model. Instead, it retains the entire dataset and uses it directly for prediction.
+
+correlation coefficient herera exploratory data analysis.
+
+
+LINEAR REGRESSION  it is a parametric model i.e. assume a specific form of data distribution and estimate parameters for that form
+
+derivative and partial derivative of the function
+
+
+
+
+
+The regression coefficient is a numerical value in a regression model that quantifies the relationship between an independent variable (predictor) and the dependent variable (response). These coefficients represent the change in the dependent variable for a one-unit change in the corresponding independent variable, assuming all other variables are held constant.
+
+
+
+
+Polynomial regression is a type of regression analysis used to model the relationship between a dependent variable  and one or more independent variables, where the relationship is best described as a non-linear function. Unlike linear regression, which fits a straight line, polynomial regression fits a curve to the data.
+
+
+from itertools import combinations
+this helps to make the list i.e. generate all subsets of the predictor variables for model evaluation.
+
+
+FEATURE ENGINEERING AND DESIGN MATRIX
+
+design matices are made by transforming the categorial variables into dummy/ indicator variables while keeping numerical variables unchanged.
+
+if the predictor takes only two values then we create an indicator or the dummy variable that takes on 2 possible numerical values.
+For example, for gender, we create a new variable: We then use this dummy variable as a predictor in the regression equation.
+As the number of the dummy variables increases the Beta values also increases from B0 to B1,...
+
+
+ONE HOT ENCODING
+technique used to convert categorial data into a binary (0s and 1s) numerical format.
+The number of columns created equals the number of unique categories in the variable.
+
+
+dataframe bata column hatayera naya dataframe banauna lai df.drop('column-name' ,axis=1)
+axis 1 le chai operation column ma garne ho rows ma haina vanera vanxa
+
+
+x_train.select_dtypes(include=['number']) yo garda dataframe bata chai hamro datatypes number i.e. int or float wala haru select hunxa
+include ma hamle number, datetime garera 2 3 ota include garna ni skaxam ya exclude garna ni sakxam in the same way
+numeric_features = x_train.select_dtypes(include=['number']).columns.tolist()
+
+
+                         MULTICOLLINEARITY
+
+the situation when two or more predictor variables are related with each other which make it difficult to determine the individual effect of each predictor in the response or the target variable.
+
+                                DIFFERENCE BETWEEN model1.score and r2_score
+
+model1.score chai scikit-learn models le use garxa like linearregression. esle chai regression models ko lagi directly R2 compute gardinxa kinaki esle train data bata afai predictions internally call garxa i.e. model1.predict() and prediction nikalxa test ra train data ko ani R2 compute garxa
+
+whereas r2_score garda hamle pahilai predictions nikali saknu parne hunxa 
+
+model1 vaneko variable name ho jasle chau train datas lali fit garne kaam garxa using the linear regression object so .score chai hamro scikit-learn model ko ho
+
+
+                 DUMMY VARIABLES AND DESIGN MATRIX
+
+pd.get_dummies() converts the categorial variables into the one hot encoded columns i.e. binary columns for each category
+
+drop_first=True huda dataset ma first category jastai edi colors ma values are ['Red', 'Blue', 'Green'] hunxa esma chai drop garda color_Red chai harauxa jasle dummy variable trap lai avoid garxa ra multicollinearity bata chai bachauxa hamro regression model lai
+
+
+
+regression vaneko chai simply testo model ho jasle chai solve garxa coefficients haru i.e, B haru by estimating the relationship between features X and the response Y
+
+y=Bo + B1X1 +B2X2 +...+ BnXn +E
+
+here Bo is the intercept values and al other betas are the coefficient so to display coefficient we use model.coef_ but for the intercept we use model.intercept_
+
+The coefficients (β) indicate the strength and direction of the relationship between each feature and the target variable
+ 
+Seaborn and matplotlib are the data visualization library of the python in which seaborn gives more appealing plots with less effort.
+
+DROPPING ONE COLUMN
+
+it helps to reduce multicollinearity. hami sanga categroial values xa vane ra different categories xa i.e. more than 2 testo bela ma hamle euta category ko chai dummy variable lai hatauxau ra aru 0 0 huda tyo ho vanera manxam ani tae garera redundancy ghatxa
+
+X = df.drop('Sales', axis=1)
+y = df.Sales.values    esma .values le chai pandas series jun columns ma hunxa teslai chai NumPy array ma convert gardinxa
+
+print(f'{"Model Coefficients":>9}')
+ esma f string use vako xa to print.
+Aligns the text to the right with a total width of 9 characters (> indicates right alignment).
+Since the text is longer than 9 characters, it will display without truncation.
+
+
+edi dataset ma vako datas lai hamle multiply garem vane certain units le teso garda Coefficient ra R2 score ma difference audaina as muliplication or changes chai both predictors and response ma hunxa
+
+Text(x, y, text):
+ it is the object of the Matplotlib text.
+x and y is the horizontal and the vertical position of the text in the plot
+
+
+we cannot compare the mse losses when the inputs are in the different scales.
+
+NORMALIZATION AND STANDARDIZATION  are used for scalaing the predictors values before using for polynomial regression
+
+
+Note that we can also use sklearn's MinMaxScaler() to normalize our data.
+
+Note that we can also use sklearn's StandardScaler() to standardize our data.
+
+standardization includes standard deviation
+normalization includes minmax
+
+
+A pair plot is a data visualization technique used to explore relationships between multiple variables in a dataset. It creates a grid of scatter plots, showing pairwise relationships between numerical variables, and can include histograms or density plots for each variable along the diagonal.
+
+
+The pprint module in Python is short for "pretty-print," and it is used to format and display data structures (like dictionaries, lists, tuples, etc.) in a more readable way, especially when dealing with complex or nested structures.
+
+
+                                  HOW COEFFICIENT IS OBTAINED
+
+Once the model is fitted, the .coef_ attribute contains the coefficient of the predictor variable. For simple linear regression, this coefficient represents the slope of the line that best fits the data.
+
+Since .coef_ is returned as a single-element array, linreg.coef_[0] extracts the scalar value.
+
+For each iteration, linreg.fit(x, y) determines the coefficient (slope) that minimizes the error between the predicted and actual y values for that predictor.
+
+This approach calculates coefficients independently for each predictor, without accounting for potential interactions or correlations between predictors. These coefficients are not the same as those obtained from a multiple linear regression model where all predictors are considered together.
+
+
+In Python, the round() function uses banking rules by default.
+
+x=df[['x']].values 
+here values is the attribute in pandas that converts the dataframe or series into a NumPy array.
+
+
+
+fit a polynomial regression model using transformes training data.
+Make predictions using the test data, transformed in the same way.
+
+
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LinearRegression
+
+PolynomialFeatures from sklearn.preprocessing is used to create polynomial features, allowing you to transform your original features into higher-degree features (e.g., turning x into x2, x3,etc) 
+LinearRegression from sklearn.linear_model is the linear regression model used to fit the transformed polynomial features and make predictions.
+
+
+def get_poly_pred(x_train, x_test, y_train, degree=1):        #predicts target value using polynomial regression
+
+    # Generate polynomial features on the train data
+    x_poly_train= PolynomialFeatures(degree=degree).fit_transform(x_train)
+
+    # Generate polynomial features on the test data
+    print(x_train.shape, x_test.shape, y_train.shape)  # this is written to debug or ensure that the input data dimensions match
+
+    x_poly_test= PolynomialFeatures(degree=degree).fit_transform(x_test)
+
+    # Initialize a model to perform polynomial regression
+    polymodel = LinearRegression()
+
+    # Fit the model on the polynomial transformed train data
+    polymodel.fit(x_poly_train, y_train)
+
+    # Predict on the entire polynomial transformed test data
+    y_poly_pred = polymodel.predict(x_poly_test)
+    return y_poly_pred
+
+
+while plotting the variables, we use the x_l instead of the x_poly_l is because x_l is the independent variable in the original form which is easy to interprest in the plot
+the transformation is only for fitting the model and making the predictions not for visualization
+
+fiting means to find the coefficient of the datasets that minimizes the loss function i.e. MSE 
+
+for the better perfomance of the model and to minimize overfitting we use train-validation-test 
+where the given data sets are divided into the 3 parts and the test set should never be touched for model training or selection
+
+taining ma chai outlier hunxa which confuses the model. outlier vaneko chai testo data point ho jun hamro datasets ko normal point vanda dherai farak hunxa e.e. if the height of the person ranges  from 140 to 150 cm but the tall person of 250 cm comes then he is the outlier
+
+
+
+never use test data to model our data 
+
+cross validation is the technique to find the best model for the data using the multiple test train on the same datasets by dividing it into number of slots and it also helps in comparing the model
+ 
+
+                                          BIAS AND GENERALIZATION
+model selection is a way to avoid overfiting
+ways for model selection::
+ exhaustive search
+ greedy algorthms
+ tuning hyper parameters
+ regularization
+
+
+overfit  means model in train data only or when we consider too many interaction terms or the polynomial degree
+
+model complexity increase error will decrease which is called bias whereas variance incresases with model complexity
+bias is error
+
+
+low bias (accurate) and low variance (precise) is accurate and preceise model which is the one required
+
+
+bias is the error introduced by underfiting i.e. edi data sets haru non linear xa vane ra hamro model chai linear xa vane i.e. simple vayo vane more bias
+
+variance is the error introduced by the models sensitivity in the training data i.e. overfiting
+
+                                           REGULARIZATION
+is a technique used to prevent the model from overfiting the training data by adding the penalty to the models complexity
+
+
+it modifies the loss function by adding the regularization term that discourages overly complex models. 
+loss function= original loss+ a.Regularization term
+
+a is the hyperparameter that controls the strength of the regularization
+
+TYPES::
+A) LASSO l1 regularization::
+Adds a penalty proportional to the absolute values of the coefficients
+Encourages sparsity in the model by shrinking some coefficients to exactly zero (feature selection).
+
+B) Ridge regularization l2::
+Adds a penalty proportional to the squared values of the coefficients
+Shrinks coefficients closer to zero but does not make them exactly zero.
+
+
+Predictions from the single validation set might deviate more from the true data due to overfitting or underfitting.
+Predictions from cross-validation align more closely with the true data because of the robust alpha/ parameter selection
+as cross ma chai different folds ma model train garera average garera value nikalxa 
+
+                               
+
